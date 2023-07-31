@@ -1,0 +1,14 @@
+{
+    "scripts": {
+        "cy:open": "cypress open",
+        "cy:run": "cypress run",
+        "cy:run:chrome": "cypress run --browser chrome"
+    },
+    "include": [
+        "./node_modules/cypress",
+        "cypress/**/*.js"
+    ],
+    "devDependencies": {
+        "cypress": "^12.17.2"
+    }
+}
