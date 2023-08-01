@@ -1,5 +1,2 @@
 ./nodes_modules
 node_modules
-
-cypress/videos
-cypress/screenshots

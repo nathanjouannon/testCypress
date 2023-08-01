@@ -1,8 +1,7 @@
 {
     "scripts": {
         "cy:open": "cypress open",
-        "cy:run": "cypress run -b chrome",
-        "cy:run:cloud": "cypress run --record -b chrome --key 768ade64-5d52-4142-8db8-b0001c48df4c",
+        "cy:run": "cypress run",
         "cy:run:chrome": "cypress run --browser chrome"
     },
     "include": [
