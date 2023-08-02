@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-02T13:45:26.075Z",
+    "end": "2023-08-02T13:45:26.671Z",
+    "duration": 596,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5f447a2c-c1b4-494e-a05c-d5c680927928",
+      "title": "",
+      "fullFile": "cypress/e2e/testQuete3.cy.js",
+      "file": "cypress/e2e/testQuete3.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f731e1ea-ec3b-4c8a-97db-6580ba731524",
+          "title": "test de lAPI notes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login",
+              "fullTitle": "test de lAPI notes login",
+              "timedOut": null,
+              "duration": 586,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.login(user.email, user.password)\ncy.request('POST', 'https://practice.expandtesting.com/notes/api/users/login', {\n  email: user.email,\n  password: user.password\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('status');\n  expect(response.body).to.have.property('data');\n});\nit('get profile', () => {\n  cy.request('GET', 'https://practice.expandtesting.com/notes/api/users/profile').then(response => {\n    expect(response.body).to.have.property('status');\n    expect(response.body).to.have.property('data');\n    expect(response.body.message).to.eq('Profile successful');\n  });\n});\nlet note = __webpack_require__(/*! ../fixtures/notes.json */ \"./cypress/fixtures/notes.json\");\nit('cereate note', () => {\n  cy.request('POST', 'https://practice.expandtesting.com/notes/api/notes', {\n    title: note.title,\n    description: note.description,\n    category: note.category\n  }).then(response => {\n    expect(response.body).to.have.property('status');\n    expect(response.body).to.have.property('data');\n    expect(response.body.data.title).to.eq(note.title);\n  });\n});\nit('get notes', () => {\n  cy.request('GET', 'https://practice.expandtesting.com/notes/api/notes').then(response => {\n    expect(response.body).to.have.property('status');\n    expect(response.body).to.have.property('data');\n    expect(response.body.message).to.eq('Notes successfully retrieved');\n    Cypress.env('noteID', response.body.data[0].id);\n  });\n});\nit('delete note', () => {\n  const noteID = Cypress.env('noteID');\n  cy.request('DELETE', `https://practice.expandtesting.com/notes/api/notes/${noteID}`).then(response => {\n    expect(response.body).to.have.property('status');\n    expect(response.body.message).to.eq('Successful Request');\n  });\n});",
+              "err": {},
+              "uuid": "397a0ac7-2e26-488f-bd5d-8642cface10f",
+              "parentUUID": "f731e1ea-ec3b-4c8a-97db-6580ba731524",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "397a0ac7-2e26-488f-bd5d-8642cface10f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 586,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

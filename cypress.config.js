@@ -7,4 +7,11 @@ module.exports = defineConfig({
       on("task", { downloadFile });
     },
   },
+  reporter: "mochawesome",
+  reporterOptions: {
+    reportDir: "cypress/results",
+    overwrite: false,
+    html: false,
+    json: true,
+  },
 });

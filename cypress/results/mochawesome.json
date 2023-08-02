@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-02T13:45:04.616Z",
+    "end": "2023-08-02T13:45:20.616Z",
+    "duration": 16000,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c8d2f216-79e2-4ce8-96d3-805bd1f28c8e",
+      "title": "",
+      "fullFile": "cypress/e2e/testQuete2.cy.js",
+      "file": "cypress/e2e/testQuete2.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6f6adea2-0228-4823-9472-740ebfad50d8",
+          "title": "create account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "register",
+              "fullTitle": "create account register",
+              "timedOut": null,
+              "duration": 10759,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/register');\ncy.get('button[data-qa=\"accept-cta\"]').click();\ncy.get('input[id=\"firstName\"]').type('test');\ncy.get('input[id=\"lastName\"]').type('test');\ncy.get('input[id=\"signup-email\"]').type(mail);\ncy.get('input[id=\"signup-password\"]').type(password);\ncy.get('._2OVE0h6V').click();\ncy.get('[data-qa=\"signup-submit-button\"]').click();\ncy.wait(5000);\ncy.contains('Mes commandes');",
+              "err": {},
+              "uuid": "fcbb614a-4592-44a7-8af4-a00945509b27",
+              "parentUUID": "6f6adea2-0228-4823-9472-740ebfad50d8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fcbb614a-4592-44a7-8af4-a00945509b27"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10759,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "966bc177-1425-4e94-9c27-f340e6ec69a8",
+          "title": "connect to account ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "visit back market",
+              "fullTitle": "connect to account  visit back market",
+              "timedOut": null,
+              "duration": 3009,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://preprod.backmarket.fr/register');\ncy.get('button[data-qa=\"accept-cta\"]').click();\ncy.get('#signin-email').type(mail);\ncy.get('#signin-password').type(password);\ncy.get('[data-qa=\"signin-submit-button\"]').click();\ncy.contains('Mes commandes');",
+              "err": {},
+              "uuid": "dd5ea6b0-8a89-4328-97ca-d913d920a380",
+              "parentUUID": "966bc177-1425-4e94-9c27-f340e6ec69a8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dd5ea6b0-8a89-4328-97ca-d913d920a380"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3009,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

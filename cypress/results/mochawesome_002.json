@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-02T13:45:28.798Z",
+    "end": "2023-08-02T13:45:36.206Z",
+    "duration": 7408,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b3c183d4-5188-4ee5-a68a-047d698dba85",
+      "title": "",
+      "fullFile": "cypress/e2e/testQuete4.cy.js",
+      "file": "cypress/e2e/testQuete4.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bf61a47c-ed4c-4fdf-8045-5e13e86260cc",
+          "title": "upload image",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "upload image",
+              "fullTitle": "upload image upload image",
+              "timedOut": null,
+              "duration": 6559,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('body').selectFile('/Users/nathanjouannon/Desktop/image.jpeg', {\n  action: 'drag-drop'\n});\ncy.contains('Add image');",
+              "err": {},
+              "uuid": "0d193362-d0a3-49aa-bade-b028937fd6dd",
+              "parentUUID": "bf61a47c-ed4c-4fdf-8045-5e13e86260cc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0d193362-d0a3-49aa-bade-b028937fd6dd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6559,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
