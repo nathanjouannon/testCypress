@@ -1,7 +1,13 @@
-test of cypress
 
-<img width="1101" alt="Capture d’écran 2023-07-31 à 16 15 12" src="https://github.com/nathanjouannon/testCypress/assets/82818708/d2fc3ddd-48ba-4d53-834a-475ad98b8e37">
+Quete 6 cypress
+``````
+npm i 
+npm run cypress:open
+``````
+lancé la spec cypressQuete6
+``````
+⚠️⚠️ si vous réalisé le test avant le 3 septembre 2023, il faut remplacer la cle API mailSlurp par une valide
+la cle utilisé à dépasser les 50 inbox mensuel
+``````
 
-Quete 2 sur la branch : Quete 2
-et 
-Quete 3 sur la branch : Quete 3
+

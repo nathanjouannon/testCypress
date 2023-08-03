@@ -3,7 +3,7 @@
         "cy:open": "cypress open",
         "cy:run": "rimraf mochawesome-report cypress/results mochawesome.json && cypress run",
         "generateReport": "npx mochawesome-merge 'cypress/results/*.json' > mochawesome.json && npx marge mochawesome.json",
-        "cy:run:report" : "npm run cy:run && npm run generateReport",
+        "cy:run:report": "npm run cy:run && npm run generateReport",
         "cy:run:cloud": "cypress run --record -b chrome --key 768ade64-5d52-4142-8db8-b0001c48df4c",
         "cy:run:chrome": "cypress run --browser chrome"
     },
@@ -15,6 +15,7 @@
         "cypress": "^12.17.2",
         "cypress-downloadfile": "^1.2.3",
         "cypress-file-upload": "^5.0.8",
+        "mailslurp-client": "^15.17.2",
         "mochawesome": "^7.1.3",
         "mochawesome-merge": "^4.3.0",
         "mochawesome-report-generator": "^6.2.0"
